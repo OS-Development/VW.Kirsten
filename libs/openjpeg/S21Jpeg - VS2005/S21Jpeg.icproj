@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Intel C++ Project"
+	Version="12.0"
+	Name="S21Jpeg"
+	ProjectGUID="{EC0255EF-639F-4E20-BF39-FF20440CEF29}"
+	VCNestedProjectGUID="{09E6F532-306D-4C04-9A6A-667613DBB318}"
+	VCNestedProjectFileName="S21Jpeg.vcproj"
+	>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			>
+			<Tool
+				Name="CppCmplrTool"
+				Parallelization="true"
+			/>
+		</Configuration>
+	</Configurations>
+	<Files/>
+</VisualStudioProject>

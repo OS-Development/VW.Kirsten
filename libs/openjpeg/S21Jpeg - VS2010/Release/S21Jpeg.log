@@ -1,0 +1,28 @@
+﻿  bio.c
+  cio.c
+  dwt.c
+libopenjpeg\dwt.c(290): warning C4068: unknown pragma
+libopenjpeg\dwt.c(292): warning C4068: unknown pragma
+libopenjpeg\dwt.c(299): warning C4068: unknown pragma
+libopenjpeg\dwt.c(301): warning C4068: unknown pragma
+  event.c
+  image.c
+  j2k.c
+  j2k_lib.c
+  jp2.c
+  jpt.c
+  mct.c
+libopenjpeg\mct.c(81): warning C4068: unknown pragma
+  mqc.c
+  openjpeg.c
+  pi.c
+  raw.c
+  t1.c
+  t1_generate_luts.c
+  t2.c
+  tcd.c
+  tgt.c
+     Creating library D:\Dev\openjpeg\S21Jpeg - VS2010\Release\S21Jpeg.lib and object D:\Dev\openjpeg\S21Jpeg - VS2010\Release\S21Jpeg.exp
+  Generating code
+  Finished generating code
+  S21Jpeg.vcxproj -> D:\Dev\openjpeg\S21Jpeg - VS2010\Release\S21Jpeg.dll

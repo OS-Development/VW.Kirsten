@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{09E6F532-306D-4C04-9A6A-667613DBB318}</ProjectGuid>
+    <RootNamespace>S21Jpeg</RootNamespace>
+    <ProjectName>openjpeg</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Intel C++ Compiler XE 12.0</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>Intel C++ Compiler XE 12.0</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>_MBCS;_WIN32;__WINDOWS;_USRDLL;OPJ_EXPORTS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>_WIN32;_SSE;_NDEBUG;_WINDOWS;_USRDLL;OPJ_EXPORTS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Fast2</FloatingPointModel>
+      <Parallelization>true</Parallelization>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions3</EnableEnhancedInstructionSet>
+      <Optimization>Full</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="libopenjpeg\bio.c" />
+    <ClCompile Include="libopenjpeg\cio.c" />
+    <ClCompile Include="libopenjpeg\dwt.c" />
+    <ClCompile Include="libopenjpeg\event.c" />
+    <ClCompile Include="libopenjpeg\image.c" />
+    <ClCompile Include="libopenjpeg\j2k.c" />
+    <ClCompile Include="libopenjpeg\j2k_lib.c" />
+    <ClCompile Include="libopenjpeg\jp2.c" />
+    <ClCompile Include="libopenjpeg\jpt.c" />
+    <ClCompile Include="libopenjpeg\mct.c" />
+    <ClCompile Include="libopenjpeg\mqc.c" />
+    <ClCompile Include="libopenjpeg\openjpeg.c" />
+    <ClCompile Include="libopenjpeg\pi.c" />
+    <ClCompile Include="libopenjpeg\raw.c" />
+    <ClCompile Include="libopenjpeg\t1.c" />
+    <ClCompile Include="libopenjpeg\t1_generate_luts.c" />
+    <ClCompile Include="libopenjpeg\t2.c" />
+    <ClCompile Include="libopenjpeg\tcd.c" />
+    <ClCompile Include="libopenjpeg\tgt.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libopenjpeg\bio.h" />
+    <ClInclude Include="libopenjpeg\cio.h" />
+    <ClInclude Include="libopenjpeg\dwt.h" />
+    <ClInclude Include="libopenjpeg\event.h" />
+    <ClInclude Include="libopenjpeg\fix.h" />
+    <ClInclude Include="libopenjpeg\image.h" />
+    <ClInclude Include="libopenjpeg\int.h" />
+    <ClInclude Include="libopenjpeg\j2k.h" />
+    <ClInclude Include="libopenjpeg\j2k_lib.h" />
+    <ClInclude Include="libopenjpeg\jp2.h" />
+    <ClInclude Include="libopenjpeg\jpt.h" />
+    <ClInclude Include="libopenjpeg\mct.h" />
+    <ClInclude Include="libopenjpeg\mqc.h" />
+    <ClInclude Include="libopenjpeg\openjpeg.h" />
+    <ClInclude Include="libopenjpeg\opj_config.h" />
+    <ClInclude Include="libopenjpeg\opj_includes.h" />
+    <ClInclude Include="libopenjpeg\opj_malloc.h" />
+    <ClInclude Include="libopenjpeg\pi.h" />
+    <ClInclude Include="libopenjpeg\raw.h" />
+    <ClInclude Include="libopenjpeg\t1.h" />
+    <ClInclude Include="libopenjpeg\t1_luts.h" />
+    <ClInclude Include="libopenjpeg\t2.h" />
+    <ClInclude Include="libopenjpeg\tcd.h" />
+    <ClInclude Include="libopenjpeg\tgt.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
